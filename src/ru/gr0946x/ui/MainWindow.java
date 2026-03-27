@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class MainWindow extends JFrame {
 
-    private final PaintPanel mainPanel;
+    private final SelectablePanel mainPanel;
     private final Painter painter;
     private final Fractal mandelbrot;
     private final Converter conv;
@@ -21,7 +21,7 @@ public class MainWindow extends JFrame {
         mandelbrot = new Mandelbrot();
         conv = new Converter(-2.0, 1.0, -1.0, 1.0);
         painter = new FractalPainter(mandelbrot, conv);
-        mainPanel = new PaintPanel(painter);
+        mainPanel = new SelectablePanel(painter);
         mainPanel.setBackground(Color.WHITE);
         setContent();
     }
